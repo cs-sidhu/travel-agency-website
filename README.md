@@ -1,4 +1,4 @@
-**Submitted by:** Hana Elbarony (directory id: helbaron)  
+**Submitted by:** Simran Sidhu (directory id: ssidhu)  
 **Group Members:** Hana Elbarony (helbaron), Simran Sidhu (ssidhu)  
 **App Description:** Travel Agency is a web app for exploring countries, offering key details like the capital, population, region, currency, languages, and flag. Users can also book tours to iconic destinations and experience new cultures.  
 **YouTube Video Link:** [https://youtu.be/hH2kgPW3IJs](https://youtu.be/hH2kgPW3IJs)  
