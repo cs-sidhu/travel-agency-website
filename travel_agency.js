@@ -14,11 +14,11 @@ const uri = `mongodb+srv://${username}:${password}@cluster0.qj0ib.mongodb.net/?r
 
 
 // Command-line argument validation
-if (process.argv.length !== 3) {
-    console.log("Usage: node travel_agency.js <portNum>");
-    process.exit(1);
-  }
-  const portNumber = process.argv[2];
+// if (process.argv.length !== 3) {
+//     console.log("Usage: node travel_agency.js <portNum>");
+//     process.exit(1);
+//   }
+  // const portNumber = process.argv[2];
 
 
 // MongoDB setup
@@ -48,6 +48,8 @@ async function lookUpTG(client, databaseAndCollection, destination) {
 
 // Express app setup
 const app = express();
+const portNumber = process.env.PORT || 3000;
+const site = process.env.RENDER_EXTERNAL_URL || `http://localhost:${portNumber}`;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.set("views", path.join(__dirname, "templates"));
@@ -57,7 +59,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Start the Express server
 app.listen(portNumber, () => {
-  console.log(`Web server is running at http://localhost:${portNumber}`);
+  console.log(`Web server is running at ${site}`);
   process.stdout.write(prompt);
 });
 
