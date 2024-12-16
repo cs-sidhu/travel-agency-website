@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Display Group</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..800&family=Geist+Mono:wght@100..900&family=SUSE:wght@100..800&display=swap');</style>
+</head>
+<style>
+    header {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 10px 20px;
+     background-color :crimson;
+     color: white;
+ }
+ header nav a {
+     margin-left: 20px;
+     text-decoration: none;
+     font-weight: bold;
+     color: #fff;
+     font-size: 1.1rem;
+ }
+ body{
+	font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+   
+}
+</style>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/current_trips">Current Trips</a>
+            <a href="/book_now">Book Now</a>
+            <a href ="/tour_groups">Tour Groups</a>
+        </nav>
+    </header>
+    <p></p>
+	<h1>The Table shows how many attendences will show up</h1>
+	<div>
+		<%- TGTable %>
+	</div><p></p>
+    <p> You can contact this person to get To know them before the trip</p>
+
+    <footer>
+        <p><strong>&copy; 2024 Travel Agency. All Rights Reserved.</strong></p>
+    </footer> 
+</body>
+
+</html>

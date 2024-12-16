@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..800&family=Geist+Mono:wght@100..900&family=SUSE:wght@100..800&display=swap');
+     </style>
+</head>
+  <style>
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px 20px;
+            background-color :crimson;
+            color: white;
+            
+        }
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        body{
+            font-family: "Geist Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: 1rem;
+            font-style: normal;
+        }
+        .a{
+            font-size:xx-large;
+          } 
+       
+</style>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/current_trips"> Current Trips</a>
+            <a href="/book_now">Book Now</a>
+            <a href ="/tour_groups">Tour Groups</a>
+        </nav>
+    </header>
+<div class ="a">
+    <p><strong>Journey Beyond Borders ✈️ – Discover 🗺️, Explore 🌟, and Be Inspired ✨!</p></strong> </div>
+
+<h1 style="font-size: 3rem; margin: 0;">🌍 Explore the World with Us 🌍</h1>
+    <p style="font-size: 1.3rem; margin-top: 10px; font-style: italic;">
+            Discover countries, flags, and fun facts at the click of a button. <br>
+            Ready to start your adventure?
+    </p>
+
+<!-- api goes here -->
+<div class="container">
+    
+    <h1>Find Out More About Your Next Destination Here!</h1>
+
+    <form action="/" method="post">
+        <label>Enter a Country Name:</label>
+        <input type="text" id="country" name="country" value="e.g., Turkey">
+        <button type="submit">Search</button>
+      </form>
+    
+      <% if (country_info) { %>
+        <h2>Information about <%= country_info.name %></h2>
+        <p><strong>Capital:</strong> <%= country_info.capital %></p>
+        <p><strong>Population:</strong> <%= country_info.population %></p>
+        <p><strong>Region:</strong> <%= country_info.continents %></p>
+        <p><strong>Languages:</strong> <%= country_info.languages %></p>
+        <p><strong>Currencies:</strong> <%= country_info.currencies %></p>
+        <img src="<%= country_info.flag %>" alt="Flag of <%= country_info.name %>" width="150">
+      <% } %>
+
+      <% if (error) { %>
+        <p style="color: red;"><strong>Error:</strong> <%= error %></p>
+      <% } %>
+    
+</div>
+
+
+   
+    <footer>
+        <p><strong>&copy; 2024 Travel Agency. All Rights Reserved.</strong></p>
+    </footer>
+</body>
+</html>

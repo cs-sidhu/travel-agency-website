@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Ticket Confirmation</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..800&family=Geist+Mono:wght@100..900&family=SUSE:wght@100..800&display=swap');</style>
+</head>
+<style>
+    header {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 10px 20px;
+     background-color :crimson;
+     color: white;
+ }
+ header nav a {
+     margin-left: 20px;
+     text-decoration: none;
+     font-weight: bold;
+     color: #fff;
+     font-size: 1.1rem;
+ }
+ body{
+	font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+   
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/current_trips">Current Trips</a>
+            <a href="/book_now">Book Now</a>
+            <a href ="/tour_groups">Tour Groups</a>
+        </nav>
+    </header>
+     <h3>Your Information has been Confirmed</h3>
+
+        <p><strong>Name: </strong><%- name %></p>
+        <p><strong>Email Address: </strong><%- email %></p>
+        <p><strong>Ticket Number: </strong><%- randomTicketNumber %></p>
+        <p><strong>You have sucessfully booked your ticket for <%- destination %>!</strong><br>
+       
+        <hr>
+    <footer>
+            <p><strong>&copy; 2024 Travel Agency. All Rights Reserved.</strong></p>
+    </footer>    
+</body>
+</html>

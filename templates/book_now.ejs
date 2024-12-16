@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Form</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..800&family=Geist+Mono:wght@100..900&family=SUSE:wght@100..800&display=swap');</style>
+</head>
+<style>
+    header {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 10px 20px;
+     background-color :crimson;
+     color: white;
+ }
+ header nav a {
+     margin-left: 20px;
+     text-decoration: none;
+     font-weight: bold;
+     color: #fff;
+     font-size: 1.1rem;
+ }
+ body{
+	font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+   
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/current_trips">Current Trips</a>
+            <a href="/book_now">Book Now</a>
+            <a href ="/tour_groups">Tour Groups</a>
+        </nav>
+    </header>
+            <form action="/ticket_confirmation" method="post">
+
+                <!-- User Information then ehen book pressed it will send the ticket confirmation  -->
+                
+                    <h3>Fill in the form to book your ticket today!</h3>
+                    <fieldset>
+                        <fieldset>
+                            <legend>Personal Info</legend>
+                            <label><strong>Name: </strong><input type="text" name="name"></label><br></br>
+                            <label><strong>Birthdate: </strong><input type="date" name="date"></label><br></br>
+                            Please enter an email you're comfortable sharing to locate your tour group:
+                            <label><strong>Email: </strong><input type="email" name="email"></label><br></br>
+                            <label><strong>Phone Number: </strong><input type="tel" name="phone"></label><br></br>
+                            <label><strong>Passport Number: </strong><input type="password" name="passport"></label><br></br>
+                        </fieldset>
+                
+                        <fieldset> 
+                            <legend>Destination Trips</legend>
+                            <select name="destination">
+                                <option value="turkey">Turkey</option>
+                                <option value="japan">Japan</option>
+                                <option value="egypt">Egypt</option>
+                                <option value="italy">Italy</option>
+                                <option value="france">France</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset> 
+                            <legend>Optional Add-On's</legend>
+                            <label><input type="checkbox" name="insurance">Travel Insurance</label><br></br>
+                            <label><input type="checkbox" name="visa">Visa Assistance</label>
+                        </fieldset>
+                    </fieldset>
+                    <input type="reset"/>
+                    <button type="submit">Book Ticket Now!</button>
+            </form>
+        <footer>
+                <p><strong>&copy; 2024 Travel Agency. All Rights Reserved.</strong></p>
+        </footer>  
+</body>
+</html>
