@@ -10,7 +10,8 @@ const password = process.env.MONGO_DB_PASSWORD;
 const dbName = process.env.MONGO_DB_NAME;
 const collectionName = process.env.MONGO_COLLECTION;
 
-const uri = `mongodb+srv://${username}:${password}@cluster0.qj0ib.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+// const uri = `mongodb+srv://${username}:${password}@cluster0.qj0ib.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = `mongodb+srv://${username}:${password}@cluster0.bzk13.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 
 // Command-line argument validation
